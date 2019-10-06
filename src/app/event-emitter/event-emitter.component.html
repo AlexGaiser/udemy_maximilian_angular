@@ -1,0 +1,12 @@
+
+<p #counterMessage >{{emitVariable}}</p>
+
+
+<button mat-raised-button color='accent' (click)="onClick(emitVariable, counterMessage)" >Emit event</button>
+
+
+<ng-content #name>
+
+</ng-content>
+
+<input #numInput />

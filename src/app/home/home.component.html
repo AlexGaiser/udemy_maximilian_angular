@@ -1,0 +1,19 @@
+
+
+<p *ngIf="counter%2 === 0; else oddMessage"   >Second Power: {{secondPower}} Third Power: {{thirdPower}} Fourth Power {{fourthPower}} </p>
+<ng-template #oddMessage>
+  <p >Counter is an odd number </p>
+
+</ng-template>
+
+<app-event-emitter
+  (numInc)="onNumIncreased($event)"
+  [emitVariable]="counter"
+>
+  <p>Content Content</p>
+  <p>Content Content</p>
+  <p>Content Content</p>
+  <p>Content Content</p>
+  <p>Content Content</p>
+
+</app-event-emitter>

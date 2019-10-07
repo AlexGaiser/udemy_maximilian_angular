@@ -18,13 +18,16 @@ import {
 import { HomeComponent } from './home/home.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { BasicHighlightDirectiveDirective } from './basic-highlight-directive.directive';
+import { BetterHighlightDirective } from './better-highlight.directive';
+import { LoggingService } from './logging.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EventEmitterComponent,
-    BasicHighlightDirectiveDirective
+    BasicHighlightDirectiveDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,9 @@ import { BasicHighlightDirectiveDirective } from './basic-highlight-directive.di
     MatFormFieldModule,
     MatInputModule,
   ],
-  providers: [],
+  providers: [
+    LoggingService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

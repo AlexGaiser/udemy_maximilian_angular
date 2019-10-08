@@ -13,6 +13,7 @@ import {
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
+  MatSidenavModule,
 
 } from '@angular/material';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +21,9 @@ import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { BasicHighlightDirectiveDirective } from './basic-highlight-directive.directive';
 import { BetterHighlightDirective } from './better-highlight.directive';
 import { LoggingService } from './logging.service';
+import { SubscriberComponent } from './subscriber/subscriber.component';
+import { OddDetailComponent } from './odd-detail/odd-detail.component';
+import { EvenDetailComponent } from './even-detail/even-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { LoggingService } from './logging.service';
     HomeComponent,
     EventEmitterComponent,
     BasicHighlightDirectiveDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    SubscriberComponent,
+    OddDetailComponent,
+    EvenDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +48,8 @@ import { LoggingService } from './logging.service';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
+    MatSidenavModule,
   ],
   providers: [
     LoggingService,

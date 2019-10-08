@@ -23,6 +23,7 @@ export class EventEmitterComponent implements OnInit {
   constructor(private log: LoggingService, private counterService: CounterService) { }
 
   ngOnInit() {
+    this.num = this.counterService.counter
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -36,10 +37,7 @@ export class EventEmitterComponent implements OnInit {
   onClick(num, localReference:HTMLInputElement){
 
     console.log(this.numInput);
-    const outputNum = this.increaseByOne(num);
-    console.log(outputNum);
-    this.counterService.numberIncreased.emit(outputNum);
-
+    this.counterService.increaseByOne(1)
     this.log.serviceStatus = "status " + num + 'times clicked'
   }
 

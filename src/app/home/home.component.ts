@@ -10,7 +10,7 @@ import { CounterService } from '../Services/counter.service';
 export class HomeComponent implements OnInit {
 
 
-  counter: number = 0
+  counter: number = this.counterService.counter
   secondPower: number= null;
   thirdPower: number = null
   fourthPower: number = null

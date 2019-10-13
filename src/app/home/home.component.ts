@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoggingService } from '../logging.service';
 import { CounterService } from '../Services/counter.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
   secondPower: number = null;
   thirdPower: number = null
   fourthPower: number = null
+  currentDate: Date = new Date();
   constructor(private loggingService: LoggingService, private counterService: CounterService) { }
 
   ngOnInit() {
@@ -21,6 +23,11 @@ export class HomeComponent implements OnInit {
     this.loggingService.logStatusChange('status logged')
     this.loggingService.logServiceStatus()
     setInterval(() => this.loggingService.logServiceStatus(), 3000)
+
+    interval(1000).subscribe(date=>{
+
+    })
+
   }
 
 

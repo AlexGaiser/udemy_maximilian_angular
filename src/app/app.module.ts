@@ -14,7 +14,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatSidenavModule,
-
+  MatCheckboxModule,
 } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
@@ -24,6 +24,7 @@ import { LoggingService } from './logging.service';
 import { SubscriberComponent } from './subscriber/subscriber.component';
 import { OddDetailComponent } from './odd-detail/odd-detail.component';
 import { EvenDetailComponent } from './even-detail/even-detail.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { EvenDetailComponent } from './even-detail/even-detail.component';
     BetterHighlightDirective,
     SubscriberComponent,
     OddDetailComponent,
-    EvenDetailComponent
+    EvenDetailComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +52,7 @@ import { EvenDetailComponent } from './even-detail/even-detail.component';
     MatInputModule,
     MatMenuModule,
     MatSidenavModule,
+    MatCheckboxModule
   ],
   providers: [
     LoggingService,

@@ -1,6 +1,7 @@
 <mat-toolbar color="primary"  > Maximillian course practice
   <button mat-raised-button color="accent"  [matMenuTriggerFor]="menu">Nav Menu</button>
 <mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['/observable']" routerLinkActive="router-link-active" >Observable</button>
   <button mat-menu-item [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</button>
 
   <button mat-menu-item [routerLink]="['/odd']" routerLinkActive="router-link-active"  >Odd</button>

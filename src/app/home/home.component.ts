@@ -11,29 +11,26 @@ export class HomeComponent implements OnInit {
 
 
   counter: number = this.counterService.counter
-  secondPower: number= null;
+  secondPower: number = null;
   thirdPower: number = null
   fourthPower: number = null
   constructor(private loggingService: LoggingService, private counterService: CounterService) { }
 
   ngOnInit() {
-    this.counterService.numberIncreased.subscribe(num=>this.onNumIncreased(num))
+    this.counterService.numberIncreased.subscribe(num => this.onNumIncreased(num))
     this.loggingService.logStatusChange('status logged')
     this.loggingService.logServiceStatus()
-    setInterval(()=>this.loggingService.logServiceStatus(), 3000)
+    setInterval(() => this.loggingService.logServiceStatus(), 3000)
   }
 
 
 
-  onNumIncreased(num){
+  onNumIncreased(num) {
     this.counter = num;
     this.secondPower = num * num
     this.thirdPower = num * num * num
     this.fourthPower = num * num * num * num
 
   }
-
-
-
 
 }

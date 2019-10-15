@@ -25,6 +25,8 @@ import { SubscriberComponent } from './subscriber/subscriber.component';
 import { OddDetailComponent } from './odd-detail/odd-detail.component';
 import { EvenDetailComponent } from './even-detail/even-detail.component';
 import { ObservableComponent } from './observable/observable.component';
+import { ShortenPipe } from './shorten.pipe';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ObservableComponent } from './observable/observable.component';
     SubscriberComponent,
     OddDetailComponent,
     EvenDetailComponent,
-    ObservableComponent
+    ObservableComponent,
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

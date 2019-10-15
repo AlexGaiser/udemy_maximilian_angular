@@ -1,8 +1,10 @@
 
 
 
+<p>{{titleMessage | uppercase | shorten: 100: 'this is the alternate message'}}</p>
+<p>{{currentDate | date: 'fullDate' | uppercase}}</p>
 
-
+<p *ngIf='obsActivated'>Activated!</p>
 
 <p *ngIf="counter%2 === 0; else oddMessage"   >Second Power: {{secondPower}} Third Power: {{thirdPower}} Fourth Power {{fourthPower}} </p>
 <ng-template #oddMessage>
